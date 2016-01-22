@@ -1,0 +1,18 @@
+{
+"resources":
+	[
+		{"name":"bgContain","type":"image","url":"assets/bgContain.png"},
+		{"name":"button","type":"image","url":"assets/button.png"},
+        {"name":"bgPanzi","type":"image","url":"assets/bgPanzi.png"},
+        {"name":"Cooky","type":"image","url":"assets/Cooky.png"},
+        {"name":"Tip","type":"image","url":"assets/Tip.png"},
+        {"name":"False","type":"image","url":"assets/False.png"},
+        {"name":"Ad","type":"image","url":"assets/Ad.png"},
+        {"name":"description","type":"json","url":"config/description.json"}
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"bgContain,button,bgPanzi,Cooky,Tip,False,Ad"}
+	]
+}
