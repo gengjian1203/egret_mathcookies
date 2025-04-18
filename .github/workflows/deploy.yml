@@ -5,7 +5,7 @@ run-name: Manual Deploy by ${{ github.actor }} ${{ github.event.inputs.environme
 env:
   BUILD_OUTPUT_PATH: "HelloWorld/launcher"
   BUILD_NAME: "Mathcookies"
-  BUILD_RM: true # important
+  BUILD_RM: "true" # important
 
 on:
   workflow_dispatch:
@@ -53,12 +53,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "yarn"
-
       - name: List build result
         run: ls -la ${{ env.BUILD_OUTPUT_PATH }}
 
@@ -88,7 +82,7 @@ jobs:
       env: ${{ github.event.inputs.environment }}
       version: ${{ needs.increment-tag.outputs.new_version }}
       repository_name: ${{ needs.build.outputs.build_name }}
-      rm: ${{ needs.build.outputs.build_rm }}
+      rm: ${{ fromJSON(needs.build.outputs.build_rm) }}
       strip_components: 1
       download_dist_name: ${{ needs.build.outputs.download_dist_name }}
     secrets:
