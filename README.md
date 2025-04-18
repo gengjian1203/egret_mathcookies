@@ -4,8 +4,7 @@
 Egret MathCookies 是一个基于 Egret 引擎开发的数学教育游戏项目。该项目旨在通过有趣的游戏方式帮助孩子们学习数学知识，提高数学学习兴趣。
 
 ## 在线试玩
-- [GitHub Pages版本](http://gengjian1203.github.io/egret_mathcookies/HelloWorld/launcher/index.html)
-- [Orz2在线版本](https://orz2.online/Mathcookies)
+- [在线版本](https://orz2.online/Mathcookies)
 
 ## 技术栈
 - Egret Engine
