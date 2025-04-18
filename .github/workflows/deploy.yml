@@ -3,7 +3,7 @@ name: Deploy
 run-name: Manual Deploy by ${{ github.actor }} ${{ github.event.inputs.environment }} ${{ github.event.inputs.branch }} ${{ github.event.inputs.commit }}
 
 env:
-  BUILD_OUTPUT_PATH: "HelloWorld/launcher"
+  BUILD_OUTPUT_PATH: "HelloWorld/release"
   BUILD_NAME: "Mathcookies"
   BUILD_RM: "true" # important
 
