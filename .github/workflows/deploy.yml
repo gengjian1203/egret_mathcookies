@@ -60,8 +60,8 @@ jobs:
         id: repo
         run: |
           TIMESTAMP=$(date +%Y%m%d%H%M%S)
-          REPO_NAME=$(echo "${{ github.repository }}" | cut -d'/' -f2)
-          DOWNLOAD_DIST_NAME="${{ github.repository }}-${TIMESTAMP}"
+          REPO_NAME=$(echo "${{ github.repository }}" | tr '/' '_')
+          DOWNLOAD_DIST_NAME="${REPO_NAME}-${TIMESTAMP}"
 
           echo "download_dist_name=$DOWNLOAD_DIST_NAME" >> $GITHUB_OUTPUT
 
