@@ -4,7 +4,7 @@ run-name: Manual Deploy by ${{ github.actor }} ${{ github.event.inputs.environme
 
 env:
   BUILD_OUTPUT_PATH: "HelloWorld/release"
-  BUILD_NAME: "Mathcookies"
+  BUILD_NAME: "projects/mathcookies"
   BUILD_RM: "true" # important
 
 on:
