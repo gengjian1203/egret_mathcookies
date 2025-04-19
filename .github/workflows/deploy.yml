@@ -4,7 +4,7 @@ run-name: Manual Deploy by ${{ github.actor }} ${{ github.event.inputs.environme
 
 env:
   BUILD_OUTPUT_PATH: "HelloWorld/release"
-  BUILD_NAME: "projects\/mathcookies"
+  BUILD_NAME: "projects/mathcookies"
   BUILD_RM: "true" # important
 
 on:
@@ -60,12 +60,8 @@ jobs:
         id: repo
         run: |
           TIMESTAMP=$(date +%Y%m%d%H%M%S)
-          if [ -n "${{ env.BUILD_NAME }}" ]; then
-            REPO_NAME="${{ env.BUILD_NAME }}"
-          else
-            REPO_NAME=$(echo "${{ github.repository }}" | cut -d'/' -f2)
-          fi
-          DOWNLOAD_DIST_NAME="${REPO_NAME}-${TIMESTAMP}"
+          REPO_NAME=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          DOWNLOAD_DIST_NAME="${{ github.repository }}-${TIMESTAMP}"
 
           echo "download_dist_name=$DOWNLOAD_DIST_NAME" >> $GITHUB_OUTPUT
 
